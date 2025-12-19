@@ -12,12 +12,14 @@ apt upgrade -y
 echo "--- Removing old dependencies ---"
 apt autoremove -y
 
+echo "--- Install sudoInstall sudo---"
+apt update && apt install sudo -y
+
+echo "--- Install makefile---"
+sudo apt install build-essential -y
+
 # Clean up downloaded package files
 echo "--- Cleaning up cache ---"
 apt autoclean
-
-echo "--- Install sudoInstall sudo---"
-
-apt update && apt install sudo -y
 
 echo "--- Update process complete ---"
